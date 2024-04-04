@@ -64,10 +64,10 @@ val md_theme_dark_surfaceTint = Color(0xFF5DD4FC)
 val md_theme_dark_outlineVariant = Color(0xFF40484C)
 val md_theme_dark_scrim = Color(0xFF000000)
 
-val button_color = Color(0XFF323CBC)
-val bg_checkin_color = Color(0XFF7C85EA)
+val button_color = Color(0XFF005b96)
+val bg_checkin_color = Color(0XFF16558f)
 val disabled_button_color = Color(0XFFD7DFFE)
-val bg_checkout_color = Color(0XFF2537B6)
+val bg_checkout_color = Color(0XFF6497b1)
 val overview_bg_icon = Color(0XFFEDF4FF)
 
 val seed = Color(0xFF006780)

@@ -30,11 +30,14 @@ import id.alterdev.alterattendance.R
 import id.alterdev.alterattendance.ui.theme.bg_checkin_color
 import id.alterdev.alterattendance.ui.theme.bg_checkout_color
 import id.alterdev.alterattendance.ui.theme.button_color
+import id.alterdev.alterattendance.ui.theme.disabled_button_color
 
 @Composable
 fun CheckInOutCard(
     modifier: Modifier = Modifier,
     type: CheckInOutType,
+    isEnable: Boolean = true,
+    onClick: () -> Unit
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -73,13 +76,17 @@ fun CheckInOutCard(
                 style = MaterialTheme.typography.bodyLarge,
             )
             Button(
-                onClick = { }, modifier = Modifier
+                onClick = {
+                          onClick()
+                },
+                modifier = Modifier
                     .fillMaxWidth()
                     .padding(10.dp),
+                enabled = isEnable,
                 colors = ButtonColors(
                     containerColor = button_color,
                     contentColor = Color.White,
-                    disabledContainerColor = Color.Gray,
+                    disabledContainerColor = disabled_button_color,
                     disabledContentColor = Color.Black
                 )
             ) {
@@ -124,5 +131,5 @@ sealed class CheckInOutType {
 @AlterAttendancePreview
 @Composable
 fun CheckInOutCardPreview() {
-    CheckInOutCard(type = CheckInOutType.CheckInType)
+    CheckInOutCard(type = CheckInOutType.CheckInType, onClick = {})
 }

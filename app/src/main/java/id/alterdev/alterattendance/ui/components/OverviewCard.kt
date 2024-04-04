@@ -31,6 +31,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import id.alterdev.alterattendance.ui.theme.bg_checkin_color
+import id.alterdev.alterattendance.ui.theme.button_color
 import id.alterdev.alterattendance.ui.theme.overview_bg_icon
 
 @Composable
@@ -50,7 +51,7 @@ fun OverviewCard(modifier: Modifier = Modifier, type: OverviewType) {
         ) {
             Box(
                 Modifier
-                    .padding(bottom = 8.dp)
+                    .padding(bottom = 10.dp)
                     .clip(CircleShape)
                     .background(overview_bg_icon)
                     .align(Alignment.End),
@@ -59,7 +60,7 @@ fun OverviewCard(modifier: Modifier = Modifier, type: OverviewType) {
                     imageVector = getIconForOverview(type),
                     contentDescription = "null",
                     modifier = Modifier.padding(6.dp).size(32.dp),
-                    tint = Color.Blue
+                    tint = button_color
                 )
             }
             Text(text = "15", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
